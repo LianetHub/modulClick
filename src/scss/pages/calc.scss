@@ -1,0 +1,418 @@
+.calc {
+	padding: 30px 0 80px;
+	@media (min-width: $md4) {
+		padding: 30px 0 160px;
+	}
+	// .calc__back
+	&__back {
+		line-height: 140%;
+		padding: 14px 30px;
+		border-radius: 60px;
+		border: 1px solid #1d1d1d;
+		display: inline-block;
+		font-size: 12px;
+		@media (min-width: $md5) {
+			font-size: 16px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #1d1d1d;
+				color: #fff;
+			}
+		}
+	}
+	// .calc__title
+	&__title {
+		max-width: 1380px;
+		margin-top: 40px;
+		@media (min-width: $md5) {
+			margin-top: 80px;
+		}
+		@media (min-width: $md0) {
+			margin-top: 120px;
+			padding: 0 70px;
+		}
+	}
+	// .calc__body
+	&__body {
+		margin-top: 75px;
+		@media (min-width: $md0) {
+			margin-top: 99px;
+			.row {
+				--bs-gutter-x: 70px;
+			}
+		}
+	}
+	// .calc__blocks
+	&__blocks {
+		width: 100%;
+		@media (min-width: $md3) {
+			padding-top: 50px;
+		}
+	}
+	// .calc__block
+	&__block {
+		@media (min-width: $md0) {
+			padding: 0 70px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 50px;
+			@media (min-width: $md2) {
+				margin-bottom: 100px;
+			}
+		}
+	}
+	// .calc__block-header
+	&__block-header {
+		gap: 8px;
+	}
+	// .calc__block-caption
+	&__block-caption {
+		font-weight: 700;
+		line-height: 110%;
+		font-size: 30px;
+		@media (min-width: $md3) {
+			font-size: 40px;
+		}
+	}
+	// .calc__block-btn
+	&__block-btn {
+		@media (min-width: $md3) {
+			min-width: 210px;
+		}
+	}
+	// .calc__block-body
+	&__block-body {
+		margin-top: 30px;
+		@media (min-width: $md3) {
+			margin-top: 53px;
+		}
+	}
+	// .calc__item
+	&__item {
+		display: block;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	// .calc__item-address
+	&__item-address {
+		.form__label {
+			@media (max-width: $md4) {
+				position: static;
+				font-size: 16px !important;
+			}
+		}
+		.form-control {
+			@media (max-width: $md4) {
+				text-align: left;
+			}
+		}
+	}
+
+	// .calc__item-input
+	&__item-input {
+		&:checked {
+			& + .calc__item-content {
+				background: linear-gradient(87deg, #a46f4c 24.06%, #b78767 37.82%, #3e2a1d 89.92%);
+				color: #fff;
+				&::before {
+					@extend %ic, .icon-check;
+				}
+			}
+		}
+	}
+	// .calc__item-content
+	&__item-content {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		font-weight: 700;
+		line-height: 140%;
+		text-transform: uppercase;
+		border-radius: 60px;
+		background: #fff;
+		padding: 2px 30px 2px 2px;
+		cursor: pointer;
+		transition: background-color 0.3s ease 0s;
+		font-size: 12px;
+		gap: 12px;
+
+		@media (min-width: $md5) {
+			gap: 20px;
+			font-size: 16px;
+		}
+		@media (min-width: $md4) {
+			font-size: 18px;
+		}
+		&::before {
+			content: "";
+			width: 45px;
+			height: 45px;
+			@media (min-width: $md5) {
+				font-size: 24px;
+				width: 76px;
+				height: 76px;
+			}
+			flex-shrink: 0;
+			background: #f6f2eb;
+			color: #1d1d1d;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba($color: #fff, $alpha: 0.75);
+				.calc__item-image {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	// .calc__item-image
+	&__item-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, -1px);
+		width: 320px;
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0;
+		& img {
+			border-radius: 20px;
+		}
+	}
+	// .calc__item-name
+	&__item-name {
+		margin-right: auto;
+		hyphens: auto;
+	}
+	// .calc__item-time
+	&__item-time {
+		& + .calc__item-price {
+			width: 120px;
+			@media (min-width: $md3) {
+				width: 170px;
+				margin-left: 100px;
+			}
+		}
+	}
+	// .calc__item-price
+	&__item-price {
+		text-align: right;
+		flex-shrink: 0;
+	}
+	&__item-tooltip {
+		flex-shrink: 0;
+		width: 16px;
+		@media (min-width: $md5) {
+			width: 26px;
+		}
+	}
+	// .calc__side
+	&__side {
+		border: 1px solid #bfbdb8;
+		width: 100%;
+		padding: 30px 20px 0px 20px;
+		border-radius: 20px;
+		@media (min-width: $md5) {
+			border-radius: 40px;
+			padding: 50px 50px 0px 50px;
+		}
+		@media (min-width: $md2) {
+			position: sticky;
+			top: 16px;
+		}
+		@media (min-width: $md0) {
+			padding: 70px 70px 0px 70px;
+		}
+	}
+	// .calc__side-title
+	&__side-title {
+		font-size: 30px;
+		@media (min-width: $md5) {
+			font-size: 40px;
+		}
+		font-weight: 700;
+		line-height: 110%;
+	}
+	// .calc__side-list
+	&__side-list {
+		margin-top: 40px;
+	}
+	// .calc__side-item
+	&__side-item {
+		line-height: 1.25;
+		@media (min-width: $md5) {
+			font-size: 18px;
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid #bfbdb8;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+		}
+	}
+	// .calc__side-name
+	&__side-name {
+	}
+	// .calc__side-value
+	&__side-value {
+	}
+	// .calc__side-total
+	&__side-total {
+		border: 1px solid #926a50;
+		margin-bottom: -2px;
+		padding: 20px;
+		margin-top: 30px;
+		margin-right: -10px;
+		margin-left: -22px;
+		border-radius: 20px;
+		@media (min-width: $md5) {
+			border-radius: 40px;
+			margin-top: 60px;
+			padding: 50px;
+			margin-left: -52px;
+		}
+		@media (min-width: $md0) {
+			margin-left: -72px;
+			padding: 50px 70px;
+		}
+	}
+	// .calc__side-total-title
+	&__side-total-title {
+		font-weight: 500;
+		line-height: 120%;
+		font-size: 24px;
+		@media (min-width: $md5) {
+			font-size: 30px;
+		}
+	}
+	// .calc__side-total-value
+	&__side-total-value {
+		margin-top: 20px;
+		font-weight: 700;
+		line-height: 140%;
+		text-transform: uppercase;
+		font-size: 30px;
+		@media (min-width: $md5) {
+			font-size: 40px;
+		}
+	}
+	// .calc__form
+	&__form {
+		position: relative;
+		background: #1d1d1d;
+		z-index: 1;
+		color: #fff;
+		order: 1;
+		margin-top: 80px;
+		padding: 50px 10px;
+		margin-right: -10px;
+		margin-left: -10px;
+		border-radius: 0px 40px 40px 0px;
+		@media (min-width: $md5) {
+			border-radius: 0px 60px 60px 0px;
+			margin-left: 0;
+			margin-right: 0;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100vw;
+				height: 100%;
+				border-radius: 0px 60px 60px 0px;
+				background: #1d1d1d;
+				z-index: -1;
+			}
+			padding: 70px 50px 70px 0;
+		}
+		@media (min-width: $md3) {
+			padding: 120px 50px 120px 0;
+		}
+		@media (min-width: $md2) {
+			margin-top: 160px;
+		}
+		@media (min-width: $md0) {
+			padding: 120px 70px;
+		}
+	}
+	// .calc__form-header
+	&__form-header {
+		gap: 10px;
+		margin-bottom: 30px;
+		@media (min-width: $md3) {
+			margin-bottom: 70px;
+		}
+		@media (min-width: $md0) {
+			padding-right: 10px;
+		}
+	}
+	// .calc__form-title
+	&__form-title {
+	}
+	// .calc__form-subtitle
+	&__form-subtitle {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 130%;
+		max-width: 389px;
+		flex-shrink: 0;
+	}
+	// .calc__form-row
+	&__form-row {
+		@media (min-width: $md4) {
+			&.row {
+				--bs-gutter-x: 24px;
+				--bs-gutter-y: 32px;
+			}
+		}
+	}
+	// .calc__form-bottom
+	&__form-bottom {
+		margin-top: 50px;
+		padding-top: 60px;
+		gap: 30px;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 10px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1208' height='10' viewBox='0 0 1208 10' fill='none'%3E%3Cpath d='M0.556646 0C0.37789 0.273686 0.1923 0.542734 0 0.806909C9.43785 6.62851 20.6351 10 32.643 10H1175.36C1187.36 10 1198.56 6.62851 1208 0.806909C1207.81 0.542734 1207.62 0.273686 1207.44 0C1198.16 5.71801 1187.16 9.02911 1175.36 9.02911H32.643C20.841 9.02911 9.83526 5.71801 0.556646 0Z' fill='%23BFBDB8'/%3E%3C/svg%3E");
+		}
+	}
+	// .calc__form-btn
+	&__form-btn {
+		width: 100%;
+		justify-content: space-between;
+		@media (min-width: $md5) {
+			justify-content: stretch;
+			width: auto;
+		}
+	}
+	// .calc__form-text
+	&__form-text {
+		color: #bfbdb8;
+		font-weight: 500;
+		line-height: 130%;
+		@media (min-width: $md5) {
+			font-size: 20px;
+		}
+		@media (min-width: $md1) {
+			max-width: 384px;
+		}
+	}
+}

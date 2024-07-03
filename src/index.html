@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': '' })
+
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "border": true
+            })
+            <main class="page">
+                <section class="main">
+                    <div class="container">
+                        <div class="main__header d-flex flex-xl-row flex-column">
+                            <h1 class="main__title title-lg">
+                                Мы работаем, чтобы приносить
+                                <span class="thumb-img">
+                                    <img src="@img/thumbs/thumb-1.jpg" class="cover-image" alt="thumb">
+                                </span>
+                                <span class="color-accent">пользу</span>, а&nbsp;не
+                                <span class="color-gray">/извинения!/</span>
+                            </h1>
+                            <ul class="main__cards d-flex align-self-xl-end flex-md-nowrap flex-wrap flex-sm-row flex-column justify-content-between">
+                                <li class="main__card d-flex flex-column">
+                                    <div class="main__card-icon">
+                                        <img src="@img/icons/star-with-calendar.svg" alt="Иконка">
+                                    </div>
+                                    <div class="main__card-text">
+                                        В&nbsp;строительстве с&nbsp;2001 года
+                                    </div>
+                                </li>
+                                <li class="main__card main__card_border">
+                                    <div class="main__card-num">95%</div>
+                                    <div class="main__card-text">
+                                        объектов <br> строим в строк
+                                    </div>
+                                    <a href="" class="main__card-btn btn btn-white">Смотреть</a>
+                                </li>
+                                <li class="main__card d-flex flex-column">
+                                    <div class="main__card-icon">
+                                        <img src="@img/icons/star-with-people.svg" alt="Иконка">
+                                    </div>
+                                    <div class="main__card-text">
+                                        Семейное дело
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main__banner mt-lg-0 mt-4 d-sm-block d-none">
+                            <div class="main__tagline tagline">
+                                <div class="tagline__circle">
+                                    <img src="@img/circle-tagline.svg" alt="слоган">
+                                </div>
+                                <img src="@img/icons/star.svg" alt="Иконка">
+                            </div>
+                            <div class="main__banner-image">
+                                <img src="@img/main-project.jpg" class="cover-image" alt="Проект">
+                            </div>
+                        </div>
+                        <div class="main__benefits">
+                            <div class="row">
+                                <div class="col-xxl-6 col-lg-9 col-12">
+                                    <div class="main__benefits-body">
+                                        <div class="main__benefits-label">Наши достижения</div>
+                                        <ul class="main__benefits-list d-flex flex-md-row flex-column">
+                                            <li class="main__benefits-item d-flex flex-column">
+                                                <div class="main__benefits-icon ml-auto">
+                                                    <img src="@img/icons/objects.svg" alt="Иконка">
+                                                </div>
+                                                <div class="main__benefits-num">
+                                                    <strong>420+</strong>
+                                                </div>
+                                                <div class="main__benefits-subtitle">
+                                                    объектов построено за&nbsp;23 года
+                                                </div>
+                                            </li>
+                                            <li class="main__benefits-item d-flex flex-column main__benefits-item_border main__benefits-item_bg">
+                                                <div class="main__benefits-icon ml-auto">
+                                                    <img src="@img/icons/complete-project.svg" alt="Иконка">
+                                                </div>
+                                                <div class="main__benefits-num">
+                                                    <strong>95%</strong>
+                                                </div>
+                                                <div class="main__benefits-subtitle">
+                                                    объектов <br> завершаем в срок
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6 d-xxl-block d-none"></div>
+                                <div class="col-xxl-6 offset-xxl-6 col-lg-9 offset-lg-3 col-12 mt-lg-0 mt-4">
+                                    <ul class="main__benefits-list main__benefits-list_border d-flex flex-md-row flex-column">
+                                        <li class="main__benefits-item d-flex flex-column">
+                                            <div class="main__benefits-icon ml-auto">
+                                                <img src="@img/icons/calendar-complete.svg" alt="Иконка">
+                                            </div>
+                                            <div class="main__benefits-num">
+                                                <strong>3</strong> недели
+                                            </div>
+                                            <div class="main__benefits-subtitle">
+                                                средняя скорость постройки дома
+                                            </div>
+                                        </li>
+                                        <li class="main__benefits-item d-flex flex-column main__benefits-item_border">
+                                            <div class="main__benefits-icon ml-auto">
+                                                <img src="@img/icons/low.svg" alt="Иконка">
+                                            </div>
+                                            <div class="main__benefits-num">
+                                                <strong>0</strong>
+                                            </div>
+                                            <div class="main__benefits-subtitle">
+                                                судебных исков со стороны клиентов
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="traditions">
+                    <div class="container">
+                        <div class="traditions__body">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <h2 class="traditions__title title">
+                                        Строим из Северного Костромского леса <br>
+                                        <span class="color-secondary">по древним традициям</span>
+                                        <img src="@img/materials.png" alt="Материалы" class="traditions__title-visual">
+                                        Чухломского домостроения
+                                    </h2>
+                                    <div class="traditions__image traditions__image_sm d-lg-block d-none">
+                                        <img src="@img/traditions-1.jpg" class="cover-image" alt="Традиции">
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="traditions__image traditions__image_lg">
+                                        <img src="@img/traditions-2.jpg" class="cover-image" alt="Традиции">
+                                        <div class="traditions__tagline tagline">
+                                            <div class="tagline__circle">
+                                                <img src="@img/circle-tagline.svg" alt="слоган">
+                                            </div>
+                                            <img src="@img/icons/star.svg" alt="Иконка">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="traditions__list d-flex flex-md-row flex-column align-items-center justify-content-between mt-lg-0 mt-4">
+                                <li class="traditions__item d-flex flex-column">
+                                    <div class="traditions__item-icon">
+                                        <img src="@img/icons/team.svg" alt="Иконка">
+                                    </div>
+                                    <div class="traditions__item-text">Свои <br> бригады</div>
+                                </li>
+                                <li class="traditions__item-separator d-md-block d-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="168" viewBox="0 0 10 168" fill="none">
+                                        <path d="M0 167.443C0.273686 167.622 0.542734 167.808 0.806909 168C6.62851 158.562 10 147.365 10 135.357L10 32.6431C10 20.6353 6.62851 9.43799 0.806909 0.00012207C0.542734 0.192383 0.273686 0.378052 0 0.556763C5.71801 9.83533 9.02911 20.8412 9.02911 32.6431L9.02911 135.357C9.02911 147.159 5.71801 158.165 0 167.443Z" fill="white" />
+                                    </svg>
+                                </li>
+                                <li class="traditions__item d-flex flex-column">
+                                    <div class="traditions__item-icon">
+                                        <img src="@img/icons/guarantee.svg" alt="Иконка">
+                                    </div>
+                                    <div class="traditions__item-text">Гарантия <br> до 3 лет</div>
+                                </li>
+                                <li class="traditions__item-separator d-md-block d-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="168" viewBox="0 0 10 168" fill="none">
+                                        <path d="M10 167.443C9.72631 167.622 9.45727 167.808 9.19309 168C3.37149 158.562 0 147.365 0 135.357L0 32.6431C0 20.6353 3.37149 9.43799 9.19309 0.00012207C9.45727 0.192383 9.72631 0.378052 10 0.556763C4.28199 9.83533 0.970892 20.8412 0.970892 32.6431L0.970892 135.357C0.970892 147.159 4.28199 158.165 10 167.443Z" fill="white" />
+                                    </svg>
+                                </li>
+                                <li class="traditions__item d-flex flex-column">
+                                    <div class="traditions__item-icon">
+                                        <img src="@img/icons/document.svg" alt="Иконка">
+                                    </div>
+                                    <div class="traditions__item-text">Полный <br> цикл работ</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="projects">
+                    <div class="container">
+                        <div class="projects__header d-flex flex-wrap align-items-center justify-content-between">
+                            <h2 class="projects__title title-lg">
+                                Популярные проекты
+                            </h2>
+                            <div class="projects__years">
+                                2023 — 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects__body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xxl-6">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            @@include('./html/_project.html', {
+                                            "url": "01",
+                                            "name": "Джульетта",
+                                            "size": "10х11",
+                                            "square": "160",
+                                            "price": "1 200 000"
+                                            })
+                                        </div>
+                                        <div class="col-md-6">
+                                            @@include('./html/_project.html', {
+                                            "url": "04",
+                                            "name": "Подмосковная усадьба",
+                                            "size": "7х7",
+                                            "square": "83",
+                                            "price": "970 000"
+                                            })
+                                        </div>
+                                        <div class="col-md-6">
+                                            @@include('./html/_project.html', {
+                                            "url": "02",
+                                            "name": "Ковчег",
+                                            "size": "8х8",
+                                            "square": "115",
+                                            "price": "1 130 000"
+                                            })
+                                        </div>
+                                        <div class="col-md-6">
+                                            @@include('./html/_project.html', {
+                                            "url": "06",
+                                            "name": "ПатриархЪ",
+                                            "size": "8х12",
+                                            "square": "172",
+                                            "price": "2 230 000"
+                                            })
+                                        </div>
+                                        <div class="col-md-6">
+                                            @@include('./html/_project.html', {
+                                            "url": "07",
+                                            "name": "Роза Хутор",
+                                            "size": "7х10",
+                                            "square": "138",
+                                            "price": "1 990 000"
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="projects__bottom">
+                                        <h3 class="projects__bottom-caption title">
+                                            Если у вас есть свой проект —
+                                            вы можете <span class="color-accent">прислать его нам</span>
+                                            на&nbsp;оценку
+                                        </h3>
+                                        <a href="#project-send" data-fancybox class="projects__bottom-btn btn btn-lg btn-gradient">
+
+                                            <span class="btn__arrow">
+                                                <img src="@img/icons/arrow-right.svg" alt="Иконка">
+                                            </span>
+                                            <span class="btn__text">Отправить проект</span>
+                                            <span class="btn__icon">
+                                                <img src="@img/icons/sendmail.svg" alt="Иконка">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            @@include('./html/_project.html', {
+                                            "url": "02",
+                                            "name": "Ковчег",
+                                            "size": "8х8",
+                                            "square": "115",
+                                            "price": "1 130 000"
+                                            })
+                                        </div>
+                                        <div class="col-md-6">
+                                            @@include('./html/_project.html', {
+                                            "url": "03",
+                                            "name": "Модерн",
+                                            "size": "8х8",
+                                            "square": "115",
+                                            "price": "1 130 000"
+                                            })
+                                        </div>
+                                        <div class="col-12">
+                                            @@include('./html/_project.html', {
+                                            "url": "05",
+                                            "name": "Лукошко",
+                                            "size": "7х9",
+                                            "square": "91",
+                                            "price": "1 285 000"
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="projects__catalog d-flex flex-column align-items-start">
+                                        <h3 class="projects__catalog-title">
+                                            В нашем каталоге <br> более <span class="color-accent">170</span> собственных <span class="color-gray">типовых проектов</span>
+                                        </h3>
+                                        <a href="" class="projects__catalog-btn btn btn-lg btn-gradient">
+                                            подбор проекта по параметрам
+                                            <span class="btn__icon">
+                                                <img src="@img/icons/sendmail.svg" alt="Иконка">
+                                            </span>
+                                        </a>
+                                        <div class="projects__catalog-thumb thumb-img">
+                                            <img src="@img/thumbs/thumb-3.jpg" alt="thumb">
+                                        </div>
+                                        <div class="projects__catalog-quantity">170+</div>
+                                        <a href="" class="projects__catalog-more btn btn-white ml-auto">
+
+                                            <span class="btn__arrow">
+                                                <img src="@img/icons/arrow-right.svg" alt="Иконка">
+                                            </span>
+                                            <span class="btn__text">Перейти в каталог</span>
+                                            <span class="btn__icon">
+                                                <img src="@img/icons/catalog.svg" alt="Иконка">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="works">
+                    <div class="container">
+                        <div class="works__header d-flex flex-lg-row flex-column align-items-lg-end align-items-start justify-content-between">
+                            <h2 class="works__title title">
+                                Более <span class="color-secondary">350 семей</span> <br>
+                                живут в наших домах
+                            </h2>
+                            <a href="" class="works__btn btn btn-white">
+                                Посмотреть работы
+                                <span class="btn__icon">
+                                    <img src="@img/icons/works.svg" alt="Иконка">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="works__map">
+                        <div class="works__map-content" id="map"></div>
+                        <div class="works__map-placemarks">
+                            <div class="works__map-placemark marker marker_lg " style="top:  15%; left: 20%;">
+                                <div class="works__map-icon">
+                                    <img src="@img/icons/home-gradient.svg" alt="иконка">
+                                </div>
+                                123
+                            </div>
+                            <div class="works__map-placemark marker" style="top:  30%; left: 45%;">
+                                <div class="works__map-icon">
+                                    <img src="@img/icons/home-gradient.svg" alt="иконка">
+                                </div>
+                                88
+                            </div>
+                            <div class="works__map-placemark marker marker_sm" style="top:  10%; left: 60%;">
+                                <div class="works__map-icon">
+                                    <img src="@img/icons/home-gradient.svg" alt="иконка">
+                                </div>
+                                14
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__body">
+                        <div class="row">
+                            <div class="col-xl-6 offset-xl-6 col-lg-8 offset-lg-4 col-md-9 offset-md-3">
+                                <ul class="works__cards d-flex flex-sm-row flex-column">
+                                    <li class="works__card d-flex flex-column">
+                                        <div class="works__card-icon ml-auto">
+                                            <img src="@img/icons/building.svg" alt="Иконка">
+                                        </div>
+                                        <div class="works__card-num">
+                                            397
+                                        </div>
+                                        <div class="works__card-subtitle">
+                                            домов построено всего
+                                        </div>
+                                    </li>
+                                    <li class="works__card works__card_border d-flex flex-column">
+                                        <div class="works__card-icon ml-auto">
+                                            <img src="@img/icons/home.svg" alt="Иконка">
+                                        </div>
+                                        <div class="works__card-num">
+                                            84
+                                        </div>
+                                        <div class="works__card-subtitle">
+                                            дома построено <br> в 2023 — 2024
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('./html/_feedback.html')
+                @@include('./html/_steps.html')
+                <div class="founder">
+                    <div class="container">
+                        <div class="founder__body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="founder__main">
+                                        <blockquote class="founder__quote">
+                                            <p>
+                                                Я горжусь тем, что продолжаю дело своего отца и передаю своим сотрудникам его знания и опыт.
+                                            </p>
+                                            <p>
+                                                Мы постоянно развиваемся и осваиваем новые технологии, чтобы быть конкурентоспособными на рынке строительных услуг.
+                                            </p>
+                                        </blockquote>
+                                        <div class="founder__person">
+                                            <div class="founder__person-name">
+                                                Владимир Румянцев
+                                            </div>
+                                            <div class="founder__person-position">
+                                                руководитель компании «Чухломская усадьба»
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a href="https://www.youtube.com/watch?v=p9HlyXhMnak" data-fancybox class="founder__video">
+                                        <img src="@img/poster.jpg" class="cover-image" alt="Постер">
+                                        <span class="founder__video-play play-btn">
+                                            <img src="@img/icons/play.svg" alt="Иконка">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="founder__image d-lg-block d-none">
+                                <img src="@img/director.png" alt="Фото руководителя компании">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="credit">
+                    <div class="container">
+                        <div class="credit__row">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-8">
+                                    <div class="credit__main d-flex flex-column align-items-start">
+                                        <h2 class="credit__caption title">Кредит, маткапитал и&nbsp;ипотека</h2>
+                                        <div class="credit__desc">
+                                            <p>
+                                                Деньги на строительство своего дома можно получить по выгодным ставкам от наших партнёров на срок до 30 лет.
+                                            </p>
+                                            <p>
+                                                Выбирайте наиболее выгодные условия для себя.
+                                            </p>
+                                        </div>
+                                        <a href="" class="credit__btn btn btn-gradient">
+                                            Заявка на кредит
+                                            <span class="btn__icon">
+                                                <img src="@img/icons/sendmail.svg" alt="Иконка">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-4">
+                                    <div class="credit__image">
+                                        <div class="credit__label d-lg-block d-none">Мы аккредитованы в Сбере</div>
+                                        <img src="@img/sber.png" alt="Лого сбербанка">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credit__cabinet">
+                            <div class="row flex-lg-row flex-column-reverse">
+                                <div class="col-lg-6">
+                                    <div class="credit__cabinet-image">
+                                        <img src="@img/notebook.png" alt="Ноутбук">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="credit__cabinet-main d-flex flex-column align-items-start">
+                                        <h2 class="credit__caption title">Личный кабинет <br> клиента</h2>
+                                        <div class="credit__desc">
+                                            <p>
+                                                Кабинет заказчика — важный инструмент, которым мы по-настоящему гордимся. Доступ к личному кабинету остается у клиента на всё время выполнения работ.
+                                            </p>
+                                        </div>
+                                        <div class="credit__labels">
+                                            <div class="credit__label">Фотоотчеты от прорабов</div>
+                                            <div class="credit__label">Чат с менеджером</div>
+                                            <div class="credit__label">Приёмка этапов с ЭЦП</div>
+                                            <div class="credit__label">Согласование цветов и материалов</div>
+                                            <div class="credit__label">Документооборот</div>
+                                            <div class="credit__label">График работ</div>
+                                        </div>
+                                        <a href="" class="credit__btn btn btn-gradient">
+                                            Войти в кабинет
+                                            <span class="btn__icon">
+                                                <img src="@img/icons/sendmail.svg" alt="Иконка">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="articles">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xxl-6 ">
+                                <a href="https://www.youtube.com/watch?v=p9HlyXhMnak" data-fancybox class="articles__item articles__item_lg">
+                                    <span class="articles__item-poster">
+                                        <img src="@img/articles/1.jpg" class="cover-image" alt="Постер">
+                                    </span>
+                                    <span class="articles__item-body">
+                                        <span class="articles__item-name articles__item-name_lg">
+                                            Деревянная <br>
+                                            ипотека. Это как?
+                                        </span>
+                                        <span class="articles__item-play play-btn">
+                                            <img src="@img/icons/play.svg" alt="Иконка">
+                                        </span>
+                                        <span class="articles__item-time">
+                                            <img src="@img/icons/clock.svg" alt="Иконка">
+                                            1:25
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                                <a href="" class="articles__item">
+                                    <span class="articles__item-poster">
+                                        <img src="@img/articles/2.jpg" class="cover-image" alt="Постер">
+                                    </span>
+                                    <span class="articles__item-body">
+                                        <span class="articles__item-name">
+                                            Современные <br> технологии в <br> строительстве
+                                        </span>
+                                        <span class="articles__item-label">
+                                            статья
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                                <a href="https://www.youtube.com/watch?v=p9HlyXhMnak" data-fancybox class="articles__item articles__item_md">
+                                    <span class="articles__item-poster">
+                                        <img src="@img/articles/3.jpg" class="cover-image" alt="Постер">
+                                    </span>
+                                    <span class="articles__item-body">
+                                        <span class="articles__item-name">
+                                            Автоматизация и цифровизация строительных процессов
+                                        </span>
+                                        <span class="articles__item-play play-btn">
+                                            <img src="@img/icons/play.svg" alt="Иконка">
+                                        </span>
+                                        <span class="articles__item-time">
+                                            <img src="@img/icons/clock.svg" alt="Иконка">
+                                            1:25
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                                <a href="" class="articles__item">
+                                    <span class="articles__item-poster">
+                                        <img src="@img/articles/4.jpg" class="cover-image" alt="Постер">
+                                    </span>
+                                    <span class="articles__item-body">
+                                        <span class="articles__item-name">
+                                            Каркасные дома: плюсы и минусы технологии
+                                        </span>
+                                        <span class="articles__item-label">
+                                            статья
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                                <a href="https://www.youtube.com/watch?v=p9HlyXhMnak" data-fancybox class="articles__item articles__item_md">
+                                    <span class="articles__item-poster">
+                                        <img src="@img/articles/5.jpg" class="cover-image" alt="Постер">
+                                    </span>
+                                    <span class="articles__item-body">
+                                        <span class="articles__item-name">
+                                            Земляные работы: методики и техника
+                                        </span>
+                                        <span class="articles__item-play play-btn">
+                                            <img src="@img/icons/play.svg" alt="Иконка">
+                                        </span>
+                                        <span class="articles__item-time">
+                                            <img src="@img/icons/clock.svg" alt="Иконка">
+                                            1:25
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                                <a href="" class="articles__item">
+                                    <span class="articles__item-poster">
+                                        <img src="@img/articles/6.jpg" class="cover-image" alt="Постер">
+                                    </span>
+                                    <span class="articles__item-body">
+                                        <span class="articles__item-name">
+                                            Энергоэффективные материалы: преимущества и применение в строительстве
+                                        </span>
+                                        <span class="articles__item-label">
+                                            статья
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xxl-3 col-xl-4 col-md-6">
+                                <div class="articles__card d-flex flex-column">
+                                    <div class="articles__card-icon">
+                                        <img src="@img/icons/star-articles.svg" alt="Иконка">
+                                    </div>
+                                    <div class="articles__card-desc">
+                                        Интересные видео и популярные статьи мы собрали для вас в разделе «Клиентам — Полезные статьи»
+                                    </div>
+                                    <a href="" class="articles__card-btn btn btn-white">
+                                        Все статьи
+                                        <span class="btn__icon">
+                                            <img src="@img/icons/articles.svg" alt="Иконка">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_popup.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

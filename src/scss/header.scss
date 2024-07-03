@@ -1,0 +1,245 @@
+.header {
+	padding: 30px 0 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: #f6f2eb;
+	// &.scroll {
+	// 	.header__menu {
+	// 		opacity: 0;
+	// 	}
+	// 	.header__feedback {
+	// 		opacity: 0;
+	// 	}
+	// 	.icon-menu {
+	// 		display: flex;
+	// 	}
+	// }
+	// &.open-menu {
+	// 	.header__menu {
+	// 		opacity: 1;
+	// 	}
+	// 	.header__feedback {
+	// 		opacity: 1;
+	// 	}
+	// }
+	// .header__body
+	&__body {
+		position: relative;
+		&.header__body_border {
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: calc(100% + 52px);
+				height: 10px;
+				pointer-events: none;
+				border-radius: 0 0 64px 64px / 0 0 26px 26px;
+				background: #f6f2eb;
+				border-bottom: 1px solid #bfbdb8;
+				border-top: 0;
+			}
+		}
+		padding-bottom: 8px;
+	}
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 10;
+		margin-top: -22px;
+		max-width: 120px;
+		@media (min-width: $md1) {
+			max-width: 167px;
+		}
+	}
+	// .header__menu
+	&__menu {
+	}
+	// .header__feedback
+	&__feedback {
+		@media (min-width: $md1) {
+			gap: 90px;
+		}
+	}
+	// .header__actions
+	&__actions {
+		margin-top: 11px;
+		gap: 2px;
+		position: absolute;
+		top: 100%;
+		right: 10px;
+	}
+	// .header__action
+	&__action {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		border-radius: 50%;
+		transition: background-color 0.3s ease 0s;
+		width: 40px;
+		height: 40px;
+		@media (min-width: $md2) {
+			width: 60px;
+			height: 60px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #794f32;
+				& img {
+					filter: invert(1);
+				}
+			}
+		}
+		& img {
+			transition: filter 0.3s ease 0s;
+		}
+	}
+}
+
+.menu {
+	@media (min-width: $md0) {
+		padding-left: 160px;
+	}
+	@media (max-width: $md3) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #f6f2eb;
+		z-index: 9;
+		padding: calc(var(--header-height) + 40px) 20px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+		.header.open-menu & {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		gap: 24px;
+		@media (min-width: $md3) {
+			gap: 0;
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		font-weight: 700;
+		line-height: 140%;
+		text-transform: uppercase;
+		position: relative;
+		padding: 11px 15px;
+		font-size: 18px;
+		@media (min-width: $md3) {
+			font-size: 14px;
+		}
+		@media (min-width: $md1) {
+			padding: 11px 20px;
+		}
+		transition: color 0.3s ease 0s;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			border-radius: 90px;
+			background: linear-gradient(87deg, #a46f4c 24.06%, #b78767 37.82%, #3e2a1d 89.92%);
+			transition: opacity 0.3s ease 0s;
+			opacity: 0;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ffff;
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.icon-menu {
+	flex-shrink: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+
+	padding: 0;
+	background: $accent;
+	color: #fff;
+	z-index: 11;
+	height: 41px;
+	width: 41px;
+
+	border-radius: 50%;
+
+	@media (min-width: $md3) {
+		display: none;
+	}
+	@media (min-width: $md2) {
+		width: 60px;
+		height: 60px;
+	}
+	& span {
+		display: block;
+		padding: 2.5px 4px;
+		transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
+		will-change: transform;
+		pointer-events: none;
+		&::before {
+			content: "";
+			display: block;
+			height: 1px;
+			width: 20px;
+			@media (min-width: $md2) {
+				width: 36px;
+			}
+			background: currentColor;
+			transition: transform 0.3s ease 0s;
+			will-change: transform;
+		}
+	}
+	.header.open-menu & {
+		& span {
+			transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+			&::before {
+				transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
+			}
+			&:first-child {
+				transform: translateY(6.5px);
+				&::before {
+					transform: rotate(-135deg);
+				}
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: translateY(-6.5px);
+				&::before {
+					transform: rotate(-225deg);
+				}
+			}
+		}
+	}
+}

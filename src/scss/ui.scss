@@ -1,0 +1,300 @@
+@import "modules/config";
+
+.font-weight-semibold {
+	font-weight: 600;
+}
+
+.color-accent {
+	color: $accent;
+}
+
+.color-secondary {
+	color: $secondary;
+}
+
+.color-gray {
+	color: $gray;
+}
+
+.title-lg {
+	font-weight: 700;
+	line-height: 110%;
+	font-size: 30px;
+	@media (min-width: $md5) {
+		font-size: 40px;
+	}
+	@media (min-width: $md4) {
+		font-size: 50px;
+	}
+	@media (min-width: $md2) {
+		font-size: 60px;
+	}
+	@media (min-width: $md1) {
+		font-size: 70px;
+	}
+	@media (min-width: $md0) {
+		font-size: 80px;
+	}
+}
+
+.title {
+	font-size: 30px;
+	@media (min-width: $md5) {
+		font-size: 40px;
+	}
+	@media (min-width: $md4) {
+		font-size: 50px;
+	}
+	@media (min-width: $md2) {
+		font-size: 60px;
+	}
+
+	font-weight: 700;
+	line-height: 110%;
+}
+
+.thumb-img {
+	flex-shrink: 0;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	vertical-align: middle;
+	width: 60px;
+	height: 32px;
+	@media (min-width: $md5) {
+		width: 80px;
+		height: 38px;
+	}
+	@media (min-width: $md3) {
+		width: 130px;
+		height: 64px;
+	}
+	& img {
+		border-radius: 40px;
+		@media (min-width: $md3) {
+			border-radius: 60px;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		border-radius: 40px;
+		@media (min-width: $md2) {
+			border-radius: 60px;
+			top: -10px;
+			left: -10px;
+		}
+		width: 100%;
+		height: 100%;
+		border: 1px solid #bfbdb8;
+		z-index: -1;
+	}
+}
+
+.marker {
+	position: absolute;
+
+	border-radius: 50%;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	line-height: math.div(1, 1);
+	width: 160px;
+	height: 160px;
+	font-size: 53.333px;
+	box-shadow: 0 0 0 20px rgba($color: #fff, $alpha: 0.3);
+	&.marker_lg {
+		width: 220px;
+		height: 220px;
+		font-size: 60px;
+		box-shadow: 0 0 0 20px rgba($color: #fff, $alpha: 0.3);
+	}
+	&.marker_sm {
+		font-size: 40px;
+		width: 120px;
+		height: 120px;
+		box-shadow: 0 0 0 15px rgba($color: #fff, $alpha: 0.3);
+	}
+	&.marker_xs {
+		font-size: 20px;
+		width: 80px;
+		height: 80px;
+		box-shadow: 0 0 0 10px rgba($color: #fff, $alpha: 0.3);
+	}
+}
+
+.play-btn {
+	position: relative;
+	z-index: 1;
+	width: 90px;
+	height: 90px;
+	@media (min-width: $md0) {
+		width: 120px;
+		height: 120px;
+	}
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #794f32;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 130px;
+		background: linear-gradient(87deg, #a46f4c 24.06%, #b78767 37.82%, #3e2a1d 89.92%);
+		z-index: -1;
+		transition: opacity 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.tagline {
+	position: relative;
+	width: 160px;
+	height: 160px;
+	@media (min-width: $md2) {
+		width: 212px;
+		height: 212px;
+	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// .tagline__circle
+	&__circle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		& img {
+			width: 100%;
+			height: 100%;
+			animation: infiniteRotate 30s linear infinite;
+			@keyframes infiniteRotate {
+				0% {
+					transform: rotate(0);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		}
+	}
+}
+
+%slider-btn {
+	vertical-align: middle;
+	padding: 0.5rem 1.44rem;
+	font-size: 0.875rem;
+	@media (min-width: $md5) {
+		padding: 0.73rem 2rem;
+		font-size: 1rem;
+	}
+	border-radius: 3.125rem;
+	background: #fff;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3.125rem;
+	color: #171717;
+	transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+	z-index: 2;
+	@media (any-hover: hover) {
+		&:hover {
+			background: #9e8d78;
+			color: #fff;
+		}
+	}
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+
+//============ МОДУЛИ ====================
+@import "modules/popup";
+// @import "modules/navigation";
+// @import "modules/select";
+// @import "modules/stepper";
+//============ МОДУЛИ ====================
+
+// Стилизация селекта
+// $selectBg: $orange;
+// $selectColor: $mainColor;
+
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+// ::selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	-webkit-box-shadow: none;
+// 	box-shadow: none;
+// }
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+
+// Стилизация скролла
+
+// $scrollbarColor: $orange;
+// $scrollbarHover: darken(
+// 	$color: $orange,
+// 	$amount: 10,
+// );
+
+// ::-webkit-scrollbar {
+// 	width: 8px;
+// }
+// ::-webkit-scrollbar-track {
+// 	background: #fff;
+// }
+// ::-webkit-scrollbar-thumb {
+// 	background: $scrollbarColor;
+// 	border-radius: 8px;
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			background: $scrollbarHover;
+// 		}
+// 	}
+// }
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
