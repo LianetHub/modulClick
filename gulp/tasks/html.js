@@ -3,6 +3,8 @@ import webpHtmlNosvg from "gulp-webp-html-nosvg";
 import versionNumber from "gulp-version-number";
 import htmlBeautify from "gulp-html-beautify";
 
+const hasVersion = false;
+
 export const html = () => {
     return app.gulp
         .src(app.path.src.html)
@@ -30,22 +32,22 @@ export const html = () => {
         .pipe(fileinclude())
         .pipe(app.plugins.replace(/@img\//g, "img/"))
         .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         versionNumber({
-        //             value: "%DT%",
-        //             append: {
-        //                 key: "_v",
-        //                 cover: 0,
-        //                 to: ["css", "js"],
-        //             },
-        //             output: {
-        //                 file: "gulp/version.json",
-        //             },
-        //         })
-        //     )
-        // )
+        .pipe(
+            app.plugins.if(
+                hasVersion,
+                versionNumber({
+                    value: "%DT%",
+                    append: {
+                        key: "_v",
+                        cover: 0,
+                        to: ["css", "js"],
+                    },
+                    output: {
+                        file: "gulp/version.json",
+                    },
+                })
+            )
+        )
         .pipe(
             app.plugins.if(
                 app.isBuild,

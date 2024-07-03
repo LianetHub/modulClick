@@ -1,42 +1,35 @@
 <header class="header">
     <div class="container-lg">
-        <div class="header__body@@if(border===true){ header__body_border} d-flex justify-content-between align-items-center">
-            <a href="/" class="header__logo">
-                <img src="@img/logo.svg" alt="logo">
+        <div class="header__body d-flex align-items-center justify-content-between">
+            <a href="/" class="header__logo rounded">
+                <img src="@img/logo.png" alt="логотип">
             </a>
-            <div class="header__menu menu">
-                <nav class="menu__body">
-                    <ul class="menu__list d-flex justify-content-center flex-lg-row flex-column">
-                        <li class="menu__item"><a href="" class="menu__link">Проекты</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Построенные дома</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Компания</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Клиентам</a></li>
+            <div class="header__menu menu d-flex align-items-center">
+                <nav class="menu__body d-flex align-items-center rounded">
+                    <ul class="menu__list w-100 d-flex align-items-center justify-content-between rounded">
+                        <li class="menu__item"><a href="" class="menu__link">Дома</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Бани</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Растущие дома</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Ваш проект</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Заказчику</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
                     </ul>
                 </nav>
+                <div class="menu__actions rounded d-flex align-items-center">
+                    <a href="tel:88001234567" class="menu__phone">8 (800) 123-45-67</a>
+                    <div class="menu__socials socials d-flex">
+                        <a href="" class="socials__item icon-telegram"></a>
+                        <a href="" class="socials__item icon-whatsapp"></a>
+                        <a href="" class="socials__item icon-envelope"></a>
+                    </div>
+                    <a href="" class="menu__callback btn btn-primary">Заказать звонок</a>
+                </div>
             </div>
-            <a href="#callback" data-fancybox class="header__feedback btn btn-gradient d-xl-inline-flex d-none">
-                Связаться с нами
-                <span class="btn__icon">
-                    <img src="@img/icons/phone-add.svg" alt="Иконка">
-                </span>
-            </a>
             <span role="button" aria-label="Открыть меню" class="header__menu-btn icon-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </span>
-            <div class="header__actions d-flex justify-content-end">
-                <a href="#search" data-fancybox class="header__action">
-                    <img src="@img/icons/search.svg" alt="Иконка">
-                </a>
-                <a href="" class="header__action">
-                    <img src="@img/icons/favorite.svg" alt="Иконка">
-                </a>
-                <a href="" class="header__action">
-                    <img src="@img/icons/user.svg" alt="Иконка">
-                </a>
-            </div>
         </div>
     </div>
 </header>
