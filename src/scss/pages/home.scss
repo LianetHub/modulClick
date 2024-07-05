@@ -8,8 +8,6 @@
 	&__slide {
 		min-height: rem(480);
 		height: 100vh;
-		& img {
-		}
 	}
 	// .promo__body
 	&__body {
@@ -222,6 +220,11 @@
 		position: relative;
 		overflow: hidden;
 		aspect-ratio: 1;
+		&.projects__card_lg {
+			@media (min-width: $md2) {
+				aspect-ratio: math.div(858, 500);
+			}
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				.projects__card-image img {
@@ -245,7 +248,7 @@
 			left: 24px;
 		}
 		gap: 8px;
-		z-index: 2;
+		z-index: 3;
 	}
 	// .projects__card-label
 	&__card-label {
@@ -261,6 +264,7 @@
 		font-weight: 700;
 		letter-spacing: -0.16px;
 		text-transform: uppercase;
+
 		&.green {
 			background: $accent;
 			color: #fff;
@@ -268,8 +272,22 @@
 	}
 	// .projects__card-image
 	&__card-image {
+		position: relative;
+		min-height: 100%;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #000000, $alpha: 0.3);
+			z-index: 1;
+		}
 		& img {
 			transition: transform 0.3s ease 0s;
+			height: 100%;
+			object-position: center;
 		}
 	}
 	// .projects__card-body
@@ -281,6 +299,7 @@
 		bottom: 16px;
 		left: 16px;
 		right: 16px;
+		z-index: 2;
 		@media (min-width: $md1) {
 			bottom: 24px;
 			left: 24px;

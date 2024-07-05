@@ -115,6 +115,7 @@
 		}
 		@media (min-width: $md-xxl) {
 			gap: 24px;
+			font-size: 18px;
 		}
 	}
 	// .menu__item
@@ -200,6 +201,9 @@
 	}
 	// .menu__callback
 	&__callback {
+		@media (min-width: $md-xxl) {
+			padding-inline: 33px;
+		}
 	}
 }
 
@@ -244,7 +248,7 @@
 		&:first-child:last-child {
 			grid-column: span 2;
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 			gap: 8px;
 		}
 	}

@@ -115,6 +115,7 @@ $(function () {
             $('.energo__block').eq($target.index()).addClass('active').siblings().removeClass('active');
         }
 
+        // submenu touch
         if ($target.is('.menu__link') && $('body').hasClass('_touch')) {
 
             let $submenu = $target.next();
@@ -135,6 +136,47 @@ $(function () {
                 $target.addClass('active');
                 $submenu.addClass('active');
             }
+
+        }
+
+        // price accordion
+        if ($target[0].closest('.price__item-btn')) {
+            $target.closest('.price__item-btn').toggleClass('active').prev().find('.price__item-info').slideToggle()
+        }
+
+        // plans select
+        if ($target.is('.plans__slide-select')) {
+            $target.toggleClass('selected');
+            if ($target.hasClass('selected')) {
+                $target.text("Выбрано");
+            } else {
+                $target.text("Выбрать планировку");
+            }
+        }
+
+        // plans tabs
+        if ($target.is('.plans__tab')) {
+            $target.addClass('active').siblings().removeClass('active');
+            $('.plans__block').eq($target.index()).addClass('active').siblings().removeClass('active');
+            $('.plans__slider').slick("unslick")
+            $('.plans__slider').slick({
+                variableWidth: true,
+                arrows: false,
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            variableWidth: false,
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        }
+        // plans extras
+        if ($target[0].closest('.plans__extras-btn')) {
+            $target.closest('.plans__extras-btn').toggleClass('active').prev().find('.plans__extras-options').slideToggle()
 
         }
 
@@ -201,6 +243,43 @@ $(function () {
                 $('.gallery__offer').removeClass('fade-tablet')
             }
         })
+
+    }
+
+    if ($('.project__slider').length > 0) {
+        $('.project__slider').slick({
+            slidesToShow: 1,
+            infinite: false,
+            arrows: true,
+            fade: true,
+            asNavFor: '.project__thumbs'
+        });
+
+        $('.project__thumbs').slick({
+            asNavFor: '.project__slider',
+            slidesToShow: 4,
+            variableWidth: true,
+            infinite: false,
+            focusOnSelect: true,
+            arrows: false,
+        });
+    }
+
+    if ($('.plans__slider').length > 0) {
+        $('.plans__slider').slick({
+            variableWidth: true,
+            arrows: false,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        variableWidth: false,
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
 
     }
 
