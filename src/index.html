@@ -11,19 +11,16 @@
                 <section class="promo">
                     <div class="promo__slider">
                         <div class="promo__slide">
-                            <img src="@img/promo.jpg" class="cover-image" alt="">
+                            <img src="@img/promo.jpg" class="cover-image" alt="promo">
                         </div>
                         <div class="promo__slide">
-                            <img src="@img/promo.jpg" class="cover-image" alt="">
-                        </div>
-                        <div class="promo__slide">
-                            <img src="@img/promo.jpg" class="cover-image" alt="">
+                            <img src="@img/promo-2.jpg" class="cover-image" alt="promo">
                         </div>
                     </div>
                     <div class="promo__body">
                         <div class="container">
                             <div class="promo__offer d-flex flex-column align-items-start">
-                                <h1 class="promo__title title-lg">Готовые дома и бани префаб технология</h1>
+                                <h1 class="promo__title title-lg">Готовые дома и&nbsp;бани префаб технология</h1>
                                 <ul class="promo__benefits d-flex flex-wrap">
                                     <li class="promo__item d-flex align-items-center">
                                         <div class="promo__item-icon">
@@ -66,13 +63,13 @@
                     <div class="container">
                         <h2 class="design__title title text-center">
                             Создаём современный дизайн и&nbsp;используем
-                            <span class="color-accent">ПРЕФАБ-технологии</span>
+                            <span class="color-accent text-nowrap">ПРЕФАБ-технологии</span>
                             для&nbsp;вашего комфортного проживания
                         </h2>
                         <div class="design__content">
                             <div class="design__block">
-                                <div class="row">
-                                    <div class="col-3">
+                                <div class="row flex-md-row flex-column-reverse">
+                                    <div class="col-xxl-3 col-md-4">
                                         <aside class="design__side">
                                             <div class="design__side-caption">Модульные дома</div>
                                             <p class="design__side-subtitle">Живи, а не строй!</p>
@@ -88,10 +85,10 @@
                                             <a href="" class="design__side-btn btn btn-sm btn-secondary">18 вариантов</a>
                                         </aside>
                                     </div>
-                                    <div class="col-9">
+                                    <div class="col-xxl-9 col-md-8">
                                         <div class="row">
                                             @@loop('./html/_project.html', './html/design-1.json')
-                                            <div class="col-4">
+                                            <div class="col-xl-4 col-sm-6">
                                                 <div class="design__more d-flex flex-column  justify-content-center">
                                                     <a href="" class="design__more-btn btn btn-primary">Смотреть все серии</a>
                                                     <a href="" class="design__more-btn btn btn-secondary">Скачать каталог</a>
@@ -102,8 +99,8 @@
                                 </div>
                             </div>
                             <div class="design__block">
-                                <div class="row">
-                                    <div class="col-3">
+                                <div class="row flex-md-row flex-column-reverse">
+                                    <div class="col-xxl-3 col-md-4">
                                         <aside class="design__side">
                                             <div class="design__side-caption">Модульные бани</div>
                                             <p class="design__side-subtitle">Отдыхай, а не строй!</p>
@@ -118,10 +115,10 @@
                                             <a href="" class="design__side-btn btn btn-sm btn-secondary">36 вариантов</a>
                                         </aside>
                                     </div>
-                                    <div class="col-9">
+                                    <div class="col-xxl-9 col-md-8">
                                         <div class="row">
                                             @@loop('./html/_project.html', './html/design-2.json')
-                                            <div class="col-4">
+                                            <div class="col-xl-4 col-sm-6">
                                                 <div class="design__more d-flex flex-column  justify-content-center">
                                                     <a href="" class="design__more-btn btn btn-primary">Смотреть все серии</a>
                                                     <a href="" class="design__more-btn btn btn-secondary">Скачать каталог</a>
@@ -136,11 +133,11 @@
                 </section>
                 <section class="about">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-3 align-self-center">
+                        <div class="row align-items-center">
+                            <div class="col-xxl-3 col-lg-4 align-self-center">
                                 <aside class="about__sidebar">
                                     <h2 class="about__sidebar-caption title-sm">
-                                        Мы не колотим.
+                                        Мы не колотим. <br>
                                         Мы — собираем
                                     </h2>
                                     <ol class="about__sidebar-list">
@@ -151,8 +148,8 @@
                                     <a href="" class="about__sidebar-btn btn btn-secondary">Подробнее о нас</a>
                                 </aside>
                             </div>
-                            <div class="col-9">
-                                <a href="" data-fancybox class="about__video rounded-sm">
+                            <div class="col-xxl-9 col-lg-8">
+                                <a href="https://youtu.be/I_XFO2z5NLU?si=2mcCdHtK9dPmUaQ3" data-fancybox class="about__video rounded-sm">
                                     <img src="@img/video.jpg" class="cover-image" alt="Постер">
                                     <span class="about__video-play play-btn"></span>
                                 </a>
@@ -163,12 +160,12 @@
                 <section class="gallery">
                     <div class="container">
                         <div class="row">
-                            <div class="col-3 gallery__offer">
+                            <div class="col-xxl-3 col-md-4 gallery__offer">
                                 <h2 class="gallery__title title-sm">
                                     Модуль клик в&nbsp;твоём стиле!
                                 </h2>
                             </div>
-                            <div class="col-9">
+                            <div class="col-xxl-9 col-md-8">
                                 <div class="gallery__slider">
                                     <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="gallery__slide rounded-sm">
                                         <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото работы">
@@ -214,15 +211,15 @@
                 <section class="benefits">
                     <div class="container">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-xxl-3 col-6 d-sm-block d-none">
                                 <div class="benefits__image rounded-sm">
                                     <img src="@img/benefits.jpg" class="cover-image" alt="Фото работника">
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-xxl-6 col-12 order-xxl-0 order-first">
                                 <div class="benefits__cards">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-md-6">
                                             <div class="benefits__card d-flex flex-column rounded-sm">
                                                 <div class="benefits__card-header d-flex align-items-center justify-content-between">
                                                     <h3 class="benefits__card-caption title-sm">
@@ -239,7 +236,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-md-6">
                                             <div class="benefits__card d-flex flex-column rounded-sm">
                                                 <div class="benefits__card-header d-flex align-items-center justify-content-between">
                                                     <h3 class="benefits__card-caption title-sm">
@@ -256,7 +253,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-md-6">
                                             <div class="benefits__card d-flex flex-column rounded-sm">
                                                 <div class="benefits__card-header d-flex align-items-center justify-content-between">
                                                     <h3 class="benefits__card-caption title-sm">
@@ -273,7 +270,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-md-6">
                                             <div class="benefits__card d-flex flex-column rounded-sm">
                                                 <div class="benefits__card-header d-flex align-items-center justify-content-between">
                                                     <h3 class="benefits__card-caption title-sm">
@@ -292,7 +289,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-xxl-3 col-6 d-sm-block d-none">
                                 <div class="benefits__image rounded-sm">
                                     <img src="@img/benefits-2.jpg" class="cover-image" alt="Фото работника">
                                 </div>
@@ -305,8 +302,8 @@
                 <section class="energo">
                     <div class="container">
                         <div class="energo__content rounded-sm">
-                            <div class="row">
-                                <div class="col-6">
+                            <div class="row flex-xl-row flex-column-reverse">
+                                <div class="col-xl-6">
                                     <div class="energo__block active">
                                         <div class="energo__detail rounded-sm">
                                             <div class="energo__detail-image">
@@ -352,8 +349,53 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="energo__block">
+                                        <div class="energo__detail rounded-sm">
+                                            <div class="energo__detail-image">
+                                                <img src="@img/detail-2.png" alt="Фото детали">
+                                            </div>
+                                            <div class="energo__detail-info">
+                                                <div class="energo__detail-item" style="top: 25%;left: 23%;">
+                                                    <span role="button" class="energo__detail-btn"></span>
+                                                    <div class="energo__detail-desc">
+                                                        <div class="energo__detail-caption">Вентзатвор</div>
+                                                        <p class="energo__detail-text">Защищает древесину от&nbsp;гниения, не дает скапливаться влаге</p>
+                                                    </div>
+                                                </div>
+                                                <div class="energo__detail-item" style="top: 48%;left: 30%;">
+                                                    <span role="button" class="energo__detail-btn"></span>
+                                                    <div class="energo__detail-desc">
+                                                        <div class="energo__detail-caption">Вентзатвор</div>
+                                                        <p class="energo__detail-text">Защищает древесину от&nbsp;гниения, не дает скапливаться влаге</p>
+                                                    </div>
+                                                </div>
+                                                <div class="energo__detail-item" style="top: 63%;left: 57%;">
+                                                    <span role="button" class="energo__detail-btn"></span>
+                                                    <div class="energo__detail-desc">
+                                                        <div class="energo__detail-caption">Вентзатвор</div>
+                                                        <p class="energo__detail-text">Защищает древесину от&nbsp;гниения, не дает скапливаться влаге</p>
+                                                    </div>
+                                                </div>
+                                                <div class="energo__detail-item" style="top: 48%;left: 66%;">
+                                                    <span role="button" class="energo__detail-btn"></span>
+                                                    <div class="energo__detail-desc">
+                                                        <div class="energo__detail-caption">Вентзатвор</div>
+                                                        <p class="energo__detail-text">Защищает древесину от&nbsp;гниения, не дает скапливаться влаге</p>
+                                                    </div>
+                                                </div>
+                                                <div class="energo__detail-item" style="top: 23%;left: 41%;">
+                                                    <span role="button" class="energo__detail-btn"></span>
+                                                    <div class="energo__detail-desc">
+                                                        <div class="energo__detail-caption">Вентзатвор</div>
+                                                        <p class="energo__detail-text">Защищает древесину от&nbsp;гниения, не дает скапливаться влаге</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-xl-6">
                                     <div class="energo__body d-flex flex-column align-items-start">
                                         <div class="energo__header w-100 d-flex align-items-center justify-content-between">
                                             <h2 class="energo__title title">
@@ -368,7 +410,7 @@
                                             <span role="button" class="energo__tab rounded active">Дома</span>
                                             <span role="button" class="energo__tab rounded">Бани</span>
                                         </div>
-                                        <p class="energo__desc">
+                                        <p class="energo__desc mt-xl-auto mt-3">
                                             Для производства применяются энергосберегающие материалы и технологии. В основе стен — каркас из дерева камерной сушки
                                         </p>
                                     </div>

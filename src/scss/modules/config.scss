@@ -235,6 +235,12 @@
 	}
 }
 
+.order-xxl-0 {
+	@media (min-width: 1400px) {
+		order: 0;
+	}
+}
+
 .row {
 	--bs-gutter-y: 24px;
 	--bs-gutter-x: 24px;

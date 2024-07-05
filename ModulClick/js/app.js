@@ -63,12 +63,10 @@ $(function () {
     $(window).on("resize", () => getNavigator());
 
 
-
     // click handler
     $(document).on('click', function (e) {
 
         let $target = $(e.target);
-
 
         if ($target.hasClass('icon-menu')) {
             $(".header").toggleClass("open-menu");
@@ -177,7 +175,6 @@ $(function () {
         // plans extras
         if ($target[0].closest('.plans__extras-btn')) {
             $target.closest('.plans__extras-btn').toggleClass('active').prev().find('.plans__extras-options').slideToggle()
-
         }
 
     });

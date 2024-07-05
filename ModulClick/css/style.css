@@ -7,18 +7,18 @@
 }
 
 @font-face {
-  font-family: "Verdana";
-  font-display: swap;
-  src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Verdana";
+  font-display: swap;
+  src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -1043,7 +1043,7 @@ textarea.form-control {
   top: 16px;
   left: 16px;
   gap: 8px;
-  z-index: 3;
+  z-index: 2;
 }
 
 .projects__card-label,
@@ -1066,31 +1066,12 @@ textarea.form-control {
   color: #fff;
 }
 
-.projects__card-image {
-  position: relative;
-  min-height: 100%;
-}
-
-.projects__card-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-
 .projects__card-image img {
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  height: 100%;
-  -o-object-position: center;
-     object-position: center;
 }
 
 .projects__card-body {
@@ -1101,7 +1082,6 @@ textarea.form-control {
   bottom: 16px;
   left: 16px;
   right: 16px;
-  z-index: 2;
 }
 
 .projects__card-desc {
@@ -2523,10 +2503,6 @@ textarea.form-control {
     font-size: 18px;
   }
 
-  .projects__card.projects__card_lg {
-    aspect-ratio: 1.716;
-  }
-
   .about__sidebar-list {
     margin-top: 40px;
   }
@@ -2971,6 +2947,12 @@ textarea.form-control {
   .container-xl,
   .container-xxl {
     max-width: 1320px;
+  }
+
+  .order-xxl-0 {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
 
   .d-xxl-contents {
