@@ -249,31 +249,31 @@
 }
 
 .d-contents {
-	display: contents;
+	display: contents !important;
 }
 
 @media (min-width: 576px) {
 	.d-sm-contents {
-		display: contents;
+		display: contents !important;
 	}
 }
 @media (min-width: 768px) {
 	.d-md-contents {
-		display: contents;
+		display: contents !important;
 	}
 }
 @media (min-width: 992px) {
 	.d-lg-contents {
-		display: contents;
+		display: contents !important;
 	}
 }
 @media (min-width: 1200px) {
 	.d-xl-contents {
-		display: contents;
+		display: contents !important;
 	}
 }
 @media (min-width: 1400px) {
 	.d-xxl-contents {
-		display: contents;
+		display: contents !important;
 	}
 }
