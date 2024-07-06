@@ -2,7 +2,12 @@
 <html lang="ru">
     @@include('html/_head.html', { 'title': '' })
 
-    <body>
+    <body class="lock">
+        <div class="preloader">
+            <div class="logo">
+                <img src="@img/logo.png" alt="logo">
+            </div>
+        </div>
         <div class="wrapper">
             @@include('html/_header.html', {
             "border": true
@@ -127,7 +132,7 @@
                 </section>
                 <section class="gallery">
                     <div class="container">
-                        <div class="row">
+                        <div class="row position-relative">
                             <div class="col-md-6 gallery__offer">
                                 <h2 class="gallery__title title-sm">
                                     Специально в этой линейке домов мы продумали и&nbsp;разработали интерьер для&nbsp;вашей комфортной загородной жизни

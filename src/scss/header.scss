@@ -45,10 +45,45 @@
 	// .header__menu-btn
 	&__menu-btn {
 	}
+	&__contacts {
+		@media (min-width: 670px) {
+			background: #fff;
+			gap: 14px;
+			padding: 7px 16px;
+		}
+	}
+	&__phone {
+		display: none;
+		font-size: 18px;
+		@media (min-width: 860px) {
+			display: inline-block;
+		}
+		@media (min-width: $md0) {
+			font-size: 16px;
+		}
+
+		border-radius: 30px;
+		&:hover {
+			padding: 12px 18px;
+			margin: -12px -18px;
+			@media (min-width: $md-xxl) {
+				padding: 15px 24px;
+				margin: -15px -24px;
+			}
+			background: $accent;
+			color: #fff;
+		}
+	}
+	&__socials {
+		display: flex;
+		@media (max-width: 670px) {
+			display: none;
+		}
+	}
 }
 
 .menu {
-	@media (max-width: $md3) {
+	@media (max-width: $md2) {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -63,23 +98,23 @@
 			visibility: visible;
 		}
 	}
-	@media (min-width: $md3) {
+	@media (min-width: $md2) {
 		flex: 1 1 auto;
 		gap: 12px;
 	}
 	@media (min-width: $md0) {
-		gap: 24px;
+		gap: 32px;
 	}
 	@media (min-width: $md-xxl) {
 		gap: 42px;
 	}
 	// .menu__content
 	&__content {
-		@media (max-width: $md3) {
+		@media (max-width: $md2) {
 			background: #fff;
 			margin-left: auto;
 			height: 100%;
-			padding: calc(var(--header-height) + 10px) 20px 20px;
+			padding: 30px 20px 20px;
 			transition: transform 0.3s ease 0s;
 			transform: translateX(100%);
 			overflow-y: auto;
@@ -88,9 +123,12 @@
 			}
 		}
 	}
+	&__logo {
+		max-width: 140px;
+	}
 	// .menu__body
 	&__body {
-		@media (min-width: $md3) {
+		@media (min-width: $md2) {
 			background: #fff;
 			flex: 1 1 auto;
 			align-self: stretch;
@@ -106,7 +144,7 @@
 		font-size: 20px;
 		gap: 24px;
 
-		@media (min-width: $md3) {
+		@media (min-width: $md2) {
 			gap: 12px;
 			font-size: 15px;
 		}
@@ -159,8 +197,8 @@
 	&__actions {
 		@media (min-width: $md2) {
 			background: #fff;
-			gap: 14px;
-			padding: 7px 16px;
+			gap: 24px;
+			padding: 7px 16px 7px 24px;
 		}
 		@media (min-width: $md-xxl) {
 			padding: 7px 16px 7px 32px;
@@ -172,8 +210,11 @@
 	}
 	// .menu__phone
 	&__phone {
+		@media (max-width: $md4) {
+			margin-top: 32px;
+		}
 		font-size: 22px;
-		@media (min-width: $md3) {
+		@media (min-width: $md2) {
 			font-size: 15px;
 			display: none;
 		}
@@ -201,6 +242,9 @@
 	}
 	// .menu__callback
 	&__callback {
+		&.btn-primary {
+			color: rgba($color: #fff, $alpha: 0.8);
+		}
 		@media (min-width: $md-xxl) {
 			padding-inline: 33px;
 		}
@@ -208,7 +252,7 @@
 }
 
 .submenu {
-	@media (max-width: $md3) {
+	@media (max-width: $md2) {
 		margin-top: 16px;
 		padding-left: 12px;
 		font-size: 16px;
@@ -217,7 +261,7 @@
 			display: block;
 		}
 	}
-	@media (min-width: $md3) {
+	@media (min-width: $md2) {
 		position: absolute;
 		z-index: 1;
 		top: calc(100% - 8px);
@@ -304,7 +348,7 @@
 
 	border-radius: 50%;
 
-	@media (min-width: $md3) {
+	@media (min-width: $md2) {
 		display: none;
 	}
 	@media (min-width: $md2) {

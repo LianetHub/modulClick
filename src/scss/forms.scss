@@ -319,7 +319,7 @@ textarea.form-control {
 	&.btn-primary {
 		background: $accent;
 		border-color: $accent;
-		color: rgba($color: #fff, $alpha: 0.8);
+		color: #fff;
 		&:hover {
 			background: darken($color: $accent, $amount: 10);
 			border-color: darken($color: $accent, $amount: 10);

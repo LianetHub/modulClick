@@ -34,20 +34,32 @@
     <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body>
+<body class="lock">
+    <div class="preloader">
+        <div class="logo">
+            <picture>
+                <source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo">
+            </picture>
+        </div>
+    </div>
     <div class="wrapper">
         <header class="header">
-            <div class="container-lg">
+            <div class="container-xl">
                 <div class="header__body d-flex align-items-center justify-content-between">
                     <a href="/" class="header__logo rounded">
                         <picture>
                             <source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="логотип">
                         </picture>
                     </a>
-                    <div class="header__menu menu d-flex flex-lg-row flex-column align-items-center">
-                        <div class="menu__content d-lg-contents d-flex flex-column justify-content-between">
+                    <div class="header__menu menu d-flex flex-xl-row flex-column align-items-center">
+                        <div class="menu__content d-xl-contents d-flex flex-column justify-content-between">
+                            <a href="/" class="menu__logo d-xl-none">
+                                <picture>
+                                    <source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo">
+                                </picture>
+                            </a>
                             <nav class="menu__body d-flex align-items-center rounded">
-                                <ul class="menu__list w-100 d-flex flex-lg-row flex-column align-items-lg-center justify-content-between rounded">
+                                <ul class="menu__list w-100 d-flex flex-xl-row flex-column align-items-xl-center justify-content-between rounded">
                                     <li class="menu__item">
                                         <a href="" class="menu__link">Дома</a>
                                         <div class="submenu">
@@ -58,10 +70,10 @@
                                                 <li class="submenu__item"><a href="" class="submenu__link">Барн</a></li>
                                                 <li class="submenu__item"><a href="" class="submenu__link">Лофт</a></li>
                                             </ul>
-                                            <div class="submenu__images d-lg-block d-none">
+                                            <div class="submenu__images d-xl-block d-none">
                                                 <div class="submenu__image active">
                                                     <picture>
-                                                        <source srcset="img/projects/01.webp" type="image/webp"><img src="img/projects/01.jpg" class="cover-image" alt="Фото">
+                                                        <source srcset="img/projects/11.webp" type="image/webp"><img src="img/projects/11.png" class="cover-image" alt="Фото">
                                                     </picture>
                                                 </div>
                                                 <div class="submenu__image">
@@ -97,10 +109,10 @@
                                                 <li class="submenu__item"><a href="" class="submenu__link">Барн</a></li>
                                                 <li class="submenu__item"><a href="" class="submenu__link">Лофт</a></li>
                                             </ul>
-                                            <div class="submenu__images d-lg-block d-none">
+                                            <div class="submenu__images d-xl-block d-none">
                                                 <div class="submenu__image active">
                                                     <picture>
-                                                        <source srcset="img/projects/01.webp" type="image/webp"><img src="img/projects/01.jpg" class="cover-image" alt="Фото">
+                                                        <source srcset="img/projects/11.webp" type="image/webp"><img src="img/projects/11.png" class="cover-image" alt="Фото">
                                                     </picture>
                                                 </div>
                                                 <div class="submenu__image">
@@ -133,10 +145,10 @@
                                                 <li class="submenu__item"><a href="" class="submenu__link">Барн</a></li>
                                                 <li class="submenu__item"><a href="" class="submenu__link">Лофт</a></li>
                                             </ul>
-                                            <div class="submenu__images d-lg-block d-none">
+                                            <div class="submenu__images d-xl-block d-none">
                                                 <div class="submenu__image active">
                                                     <picture>
-                                                        <source srcset="img/projects/01.webp" type="image/webp"><img src="img/projects/01.jpg" class="cover-image" alt="Фото">
+                                                        <source srcset="img/projects/11.webp" type="image/webp"><img src="img/projects/11.png" class="cover-image" alt="Фото">
                                                     </picture>
                                                 </div>
                                                 <div class="submenu__image">
@@ -169,9 +181,9 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <div class="menu__actions rounded d-flex flex-lg-row flex-column-reverse align-items-lg-center mt-lg-0 mt-5">
-                                <a href="tel:88001234567" class="menu__phone mt-lg-0 mt-4">8 (800) 123-45-67</a>
-                                <div class="menu__socials socials d-xl-flex d-lg-none d-flex mt-lg-0 mt-4">
+                            <div class="menu__actions rounded d-flex flex-xl-row flex-column-reverse align-items-xl-center mt-xl-0 mt-5">
+                                <a href="tel:88001234567" class="menu__phone ">8 (800) 123-45-67</a>
+                                <div class="menu__socials socials d-flex mt-xl-0 mt-4">
                                     <a href="" class="socials__item socials__item_sm icon-telegram"></a>
                                     <a href="" class="socials__item socials__item_sm icon-whatsapp"></a>
                                     <a href="" class="socials__item socials__item_sm icon-envelope"></a>
@@ -179,6 +191,15 @@
                                 <a href="" class="menu__callback btn btn-primary">Заказать звонок</a>
                             </div>
                         </div>
+                    </div>
+                    <div class="header__contacts rounded d-xl-none d-sm-flex d-none align-items-center ml-auto">
+                        <a href="tel:88001234567" class="header__phone">8 (800) 123-45-67</a>
+                        <div class="header__socials socials">
+                            <a href="" class="socials__item socials__item_sm icon-telegram"></a>
+                            <a href="" class="socials__item socials__item_sm icon-whatsapp"></a>
+                            <a href="" class="socials__item socials__item_sm icon-envelope"></a>
+                        </div>
+                        <a href="" class="header__callback btn btn-primary">Заказать звонок</a>
                     </div>
                     <span role="button" aria-label="Открыть меню" class="header__menu-btn icon-menu">
                         <span></span>
@@ -329,7 +350,7 @@
             </section>
             <section class="gallery">
                 <div class="container">
-                    <div class="row">
+                    <div class="row position-relative">
                         <div class="col-md-6 gallery__offer">
                             <h2 class="gallery__title title-sm"> Специально в этой линейке домов мы продумали и&nbsp;разработали интерьер для&nbsp;вашей комфортной загородной жизни </h2>
                         </div>
@@ -912,7 +933,6 @@
                         <div class="col-sm-6">
                             <a href="" class="projects__card projects__card_lg d-flex flex-column rounded-sm">
                                 <span class="projects__card-labels d-flex align-items-center flex-wrap">
-                                    <span class="projects__card-label"> Классик </span>
                                     <span class="projects__card-label green"> следующий проект </span>
                                 </span>
                                 <span class="projects__card-image">

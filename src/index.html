@@ -2,7 +2,12 @@
 <html lang="ru">
     @@include('html/_head.html', { 'title': '' })
 
-    <body>
+    <body class="lock">
+        <div class="preloader">
+            <div class="logo">
+                <img src="@img/logo.png" alt="logo">
+            </div>
+        </div>
         <div class="wrapper">
             @@include('html/_header.html', {
             "border": true
@@ -213,7 +218,7 @@
                         <div class="row">
                             <div class="col-xxl-3 col-6 d-sm-block d-none">
                                 <div class="benefits__image rounded-sm">
-                                    <img src="@img/benefits.jpg" class="cover-image" alt="Фото работника">
+                                    <img src="@img/benefits.jpg" alt="Фото работника">
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-12 order-xxl-0 order-first">
@@ -291,7 +296,7 @@
                             </div>
                             <div class="col-xxl-3 col-6 d-sm-block d-none">
                                 <div class="benefits__image rounded-sm">
-                                    <img src="@img/benefits-2.jpg" class="cover-image" alt="Фото работника">
+                                    <img src="@img/benefits-2.jpg" alt="Фото работника">
                                 </div>
                             </div>
                         </div>

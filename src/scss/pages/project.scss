@@ -52,10 +52,10 @@
 		height: auto;
 		display: block;
 		cursor: pointer;
-		& img {
-			// height: 100vh;
-		}
+		position: relative;
+		overflow: hidden;
 	}
+
 	// .project__body
 	&__body {
 		position: absolute;
@@ -101,7 +101,6 @@
 	// .project__thumbs
 	&__thumbs {
 		min-width: 0;
-		// margin-right: calc(-1 * ((100vw - 710px) / 2));
 		padding: 20px 0;
 		@media (min-width: $md3) {
 			padding: 40px 0;
@@ -248,6 +247,12 @@
 			border: 1px solid #c1c1c1;
 			padding: 32px 32px;
 		}
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #f1f1f1;
+			}
+		}
 	}
 	// .price__item-btn
 	&__item-btn {
@@ -289,6 +294,9 @@
 		}
 	}
 	&__item-header {
+		width: 100%;
+		display: block;
+		cursor: pointer;
 	}
 	// .price__item-info
 	&__item-info {
@@ -409,6 +417,10 @@
 	}
 	// .plans__extras-btn
 	&__extras-btn {
+		margin-top: 18px;
+		@media (min-width: $md3) {
+			margin-top: 32px;
+		}
 		display: flex;
 		cursor: pointer;
 		&::before {
@@ -447,6 +459,16 @@
 		}
 		.slick-list {
 			overflow: visible;
+		}
+		.slick-next,
+		.slick-prev {
+			background: $accent;
+			color: #fff;
+			@media (any-hover: hover) {
+				&:hover {
+					background: darken($color: $accent, $amount: 10);
+				}
+			}
 		}
 	}
 	// .plans__slide

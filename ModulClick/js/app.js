@@ -4,6 +4,12 @@
 
 $(function () {
 
+    // preloader
+
+    setTimeout(function () {
+        $('.preloader').hide();
+        $('body').removeClass('lock')
+    }, 1000);
 
     // detect webP support
     function testWebP(callback) {
@@ -139,16 +145,29 @@ $(function () {
 
         // price accordion
         if ($target[0].closest('.price__item-btn')) {
-            $target.closest('.price__item-btn').toggleClass('active').prev().find('.price__item-info').slideToggle()
+            let $btn = $target.closest('.price__item-btn')
+            $btn.toggleClass('active')
+            $btn.prev().find('.price__item-info').slideToggle();
+        }
+        if ($target[0].closest('.price__item-header')) {
+            $target.next().slideToggle();
+            $target.parent().next().toggleClass('active')
         }
 
         // plans select
         if ($target.is('.plans__slide-select')) {
-            $target.toggleClass('selected');
+
+
             if ($target.hasClass('selected')) {
-                $target.text("Выбрано");
-            } else {
+                $target.removeClass('selected');
                 $target.text("Выбрать планировку");
+
+            } else {
+                $('.plans__slide-select').removeClass('selected');
+                $('.plans__slide-select').text("Выбрать планировку");
+
+                $target.text("Выбрано");
+                $target.addClass('selected');
             }
         }
 
@@ -265,7 +284,7 @@ $(function () {
     if ($('.plans__slider').length > 0) {
         $('.plans__slider').slick({
             variableWidth: true,
-            arrows: false,
+            arrows: true,
             infinite: false,
             responsive: [
                 {
