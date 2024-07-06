@@ -188,7 +188,7 @@
                                     <a href="" class="socials__item socials__item_sm icon-whatsapp"></a>
                                     <a href="" class="socials__item socials__item_sm icon-envelope"></a>
                                 </div>
-                                <a href="" class="menu__callback btn btn-primary">Заказать звонок</a>
+                                <a href="#callback" data-fancybox class="menu__callback btn btn-primary">Заказать звонок</a>
                             </div>
                         </div>
                     </div>
@@ -212,47 +212,47 @@
         <main class="page">
             <section class="project">
                 <div class="project__slider">
-                    <a href="img/promo.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
                         </picture>
                     </a>
-                    <a href="img/promo-2.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo-2.webp" type="image/webp"><img src="img/promo-2.jpg" class="cover-image" alt="promo">
                         </picture>
                     </a>
-                    <a href="img/promo.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
                         </picture>
                     </a>
-                    <a href="img/promo-2.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo-2.webp" type="image/webp"><img src="img/promo-2.jpg" class="cover-image" alt="promo">
                         </picture>
                     </a>
-                    <a href="img/promo.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
                         </picture>
                     </a>
-                    <a href="img/promo-2.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo-2.webp" type="image/webp"><img src="img/promo-2.jpg" class="cover-image" alt="promo">
                         </picture>
                     </a>
-                    <a href="img/promo.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
                         </picture>
                     </a>
-                    <a href="img/promo-2.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo-2.webp" type="image/webp"><img src="img/promo-2.jpg" class="cover-image" alt="promo">
                         </picture>
                     </a>
-                    <a href="img/promo.jpg" data-fancybox="project" class="project__slide">
+                    <a href="#project-slider" data-fancybox class="project__slide">
                         <picture>
                             <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
                         </picture>
@@ -1000,152 +1000,104 @@
                 </div>
             </div>
         </footer>
-    </div> <!-- <div id="callback" class="popup">
-    <div role="form" class="popup__form form d-flex flex-column">
-        <h2 class="form__title title"><span class="color-accent">Связаться</span> с нами</h2>
-        <div class="form__options">
-            <label class="form__option">
-                <input type="radio" name="bid" checked value="question" class="form__option-input hidden" hidden>
-                <span class="form__option-btn">
-                    Задать вопрос
-                </span>
-            </label>
-            <label class="form__option">
-                <input type="radio" name="bid" value="bid" class="form__option-input hidden" hidden>
-                <span class="form__option-btn">
-                    Оставить заявку
-                </span>
-            </label>
-            <label class="form__option">
-                <input type="radio" name="bid" value="review" class="form__option-input hidden" hidden>
-                <span class="form__option-btn">
-                    Оставить отзыв
-                </span>
-            </label>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form__field">
-                    <input type="text" name="name" class="form-control" placeholder="Например, Иванов Иван">
-                    <span class="form__label">Меня зовут</span>
+    </div>
+    <div id="callback" class="popup">
+        <div role="form" class="popup__form form d-flex flex-column">
+            <h2 class="form__title title"><span class="color-accent">Связаться</span> с нами</h2>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="popup__text title-sm"> Вы можете позвонить или самостоятельно <a href="+78001234567" class="font-weight-semibold">+7 (800) 123-45-67</a>
+                    </div>
+                    <div class="popup__text title-sm mt-5"> Или написать в социальных сетях </div>
+                    <div class="popup__socials socials d-flex mt-2">
+                        <a href="" class="socials__item socials__item_sm icon-telegram"></a>
+                        <a href="" class="socials__item socials__item_sm icon-whatsapp"></a>
+                        <a href="" class="socials__item socials__item_sm icon-envelope"></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form__field">
-                    <input type="tel" name="phone" class="form-control" placeholder="+7 (ххх) ххх-хх-хх">
-                    <span class="form__label">Мой телефон</span>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form__field">
-                    <textarea name="message" class="form-control" placeholder="Мой вопрос"></textarea>
-                </div>
-            </div>
-            <div class="col-12">
-                <span role="button" class="btn btn-gradient btn-lg">
-                    Отправить вопрос
-                    <span class="btn__icon">
-                        <img src="img/icons/sendmail.svg" alt="Иконка">
-                    </span>
-                </span>
-            </div>
-        </div>
-        <div class="form__bottom row">
-            <div class="col-md-6">
-                <div class="d-flex flex-sm-row flex-column">
-                    <a href="" class="form__link icon-youtube">Youtube</a>
-                    <a href="" class="form__link">Telegram
-                        <img src="img/icons/telegram-gradient.svg" alt="Иконка">
-                    </a>
-                    <a href="" class="form__link icon-vk">vkontakte</a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="d-flex flex-sm-row flex-column">
-                    <a href="" class="form__link icon-whatsapp">Whatsapp</a>
-                    <a href="" class="form__link icon-envelope">info@44srub.ru</a>
-                    <a href="" class="form__link icon-vk">vkontakte</a>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form__field">
+                                <input type="text" name="name" class="form-control" placeholder="Например, Иванов Иван">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form__field">
+                                <input type="tel" name="phone" class="form-control" placeholder="+7 (ххх) ххх-хх-хх">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form__field">
+                                <textarea name="message" class="form-control" placeholder="Сообщение или вопрос"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form__bottom d-flex flex-wrap align-items-center justify-content-between">
+                                <span role="button" class="btn btn-primary"> Отправить заявку </span>
+                                <span class="form__bottom-privacy">Отправляя заявку я соблюдаю условия отправки</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div id="project-send" class="popup">
-    <div role="form" class="popup__form form d-flex flex-column">
-        <h2 class="form__title title"><span class="color-accent">Прислать</span> свой проект</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form__field">
-                    <input type="text" name="name" class="form-control" placeholder="Например, Иванов Иван">
-                    <span class="form__label">Меня зовут</span>
-                </div>
+    <div id="project-slider" class="popup p-0">
+        <div class="popup__slider">
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
+                </picture>
             </div>
-            <div class="col-md-6">
-                <div class="form__field">
-                    <input type="tel" name="phone" class="form-control" placeholder="+7 (ххх) ххх-хх-хх">
-                    <span class="form__label">Мой телефон</span>
-                </div>
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo-2.webp" type="image/webp"><img src="img/promo-2.jpg" class="cover-image" alt="promo">
+                </picture>
             </div>
-            <div class="col-12">
-                <div class="form__field">
-                    <input type="text" name="project" class="form-control" placeholder="Ссылка на файлы проекта, например, на Яндекс Диске">
-                    <span class="form__label">Мой проект</span>
-                </div>
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
+                </picture>
             </div>
-            <div class="col-12">
-                <div class="form__field">
-                    <textarea name="message" class="form-control" placeholder="Мой вопрос"></textarea>
-                </div>
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo-2.webp" type="image/webp"><img src="img/promo-2.jpg" class="cover-image" alt="promo">
+                </picture>
             </div>
-            <div class="col-12">
-                <div class="form__privacy d-flex align-items-center flex-wrap">
-                    <span role="button" class="btn btn-lg btn-gradient">
-                        Отправить заявку
-                        <span class="btn__icon">
-                            <img src="img/icons/sendmail.svg" alt="Иконка">
-                        </span>
-                    </span>
-                    <span class="form__privacy-text">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</span>
-                </div>
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
+                </picture>
             </div>
-        </div>
-        <div class="form__bottom row">
-            <div class="col-md-6">
-                <div class="d-flex flex-sm-row flex-column">
-                    <a href="" class="form__link icon-youtube">Youtube</a>
-                    <a href="" class="form__link">Telegram
-                        <img src="img/icons/telegram-gradient.svg" alt="Иконка">
-                    </a>
-                    <a href="" class="form__link icon-vk">vkontakte</a>
-                </div>
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo-2.webp" type="image/webp"><img src="img/promo-2.jpg" class="cover-image" alt="promo">
+                </picture>
             </div>
-            <div class="col-md-6">
-                <div class="d-flex flex-sm-row flex-column">
-                    <a href="" class="form__link icon-whatsapp">Whatsapp</a>
-                    <a href="" class="form__link icon-envelope">info@44srub.ru</a>
-                    <a href="" class="form__link icon-vk">vkontakte</a>
-                </div>
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
+                </picture>
+            </div>
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo-2.webp" type="image/webp"><img src="img/promo-2.jpg" class="cover-image" alt="promo">
+                </picture>
+            </div>
+            <div class="popup__slide">
+                <picture>
+                    <source srcset="img/promo.webp" type="image/webp"><img src="img/promo.jpg" class="cover-image" alt="promo">
+                </picture>
             </div>
         </div>
     </div>
-</div>
-<div id="search" class="popup">
-    <h2 class="form__title title">Что нужно найти?</h2>
-    <div class="popup__form form">
-        <div class="form__row d-flex">
-            <div class="form__field">
-                <input type="text" name="text" class="form-control" placeholder="Строительсов дома 9х11 из бруса, например">
-                <span class="form__label">Я ищу</span>
-            </div>
-            <span role="button" class="form__search">
-                <img src="img/icons/search.svg" alt="Иконка">
-            </span>
-        </div>
-    </div>
-</div> --> <!-- plugins -->
+    <!-- plugins -->
     <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
     <!-- plugins -->
     <script defer src="js/app.min.js"></script>
 </body>

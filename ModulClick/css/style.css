@@ -15,6 +15,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 15px;
 }
 
 .preloader .logo {
@@ -400,20 +401,10 @@ body.lock {
   background: rgba(29, 29, 29, 0.4);
 }
 
-.fancybox__content {
-  color: inherit;
-  background: none;
-  padding: 0;
-}
-
-.fancybox__content :focus:not(.carousel__button.is-close) {
-  outline: none;
-}
-
 .popup {
   display: none;
   width: 100%;
-  background: #f6f2eb;
+  background: #F1F1F1;
   max-width: 1180px;
   scrollbar-width: 0;
   overflow: visible;
@@ -435,6 +426,37 @@ body.lock {
   -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+}
+
+.popup__slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup__slider .slick-prev {
+  left: 20px;
+}
+
+.popup__slider .slick-next {
+  right: 20px;
+}
+
+.popup__slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  min-height: 100%;
+  height: auto;
+}
+
+.popup__slide img {
+  min-height: 100%;
+  height: auto;
+  border-radius: 30px;
 }
 
 .form__field {
@@ -514,6 +536,10 @@ body.lock {
 .form-control._error {
   background: #ffdbdb;
   border-color: #ffdbdb;
+}
+
+.form__bottom {
+  gap: 10px;
 }
 
 .form__option {
@@ -1692,6 +1718,7 @@ textarea.form-control {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  height: 100vh;
 }
 
 .project__body {
@@ -2062,7 +2089,7 @@ textarea.form-control {
   }
 
   .popup {
-    border-radius: 60px;
+    border-radius: 30px;
     padding: 60px;
   }
 
@@ -2233,6 +2260,10 @@ textarea.form-control {
 
   .title {
     font-size: 35px;
+  }
+
+  .form__bottom-privacy {
+    max-width: 200px;
   }
 
   .form__option-content {

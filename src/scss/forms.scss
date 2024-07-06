@@ -160,14 +160,14 @@
 	// 	}
 	// }
 	// // .form__bottom
-	// &__bottom {
-	// 	margin-top: 35px;
-	// 	padding-top: 35px;
-	// 	border-top: 1px solid #bfbdb8;
-	// 	.d-flex {
-	// 		gap: 10px;
-	// 	}
-	// }
+	&__bottom {
+		gap: 10px;
+	}
+	&__bottom-privacy {
+		@media (min-width:$md4) {
+			max-width: 200px;
+		}
+	}
 	// // .form__link
 	// &__link {
 	// 	border-radius: 60px;

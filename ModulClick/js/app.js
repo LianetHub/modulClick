@@ -217,9 +217,9 @@ $(function () {
 
     // fancybox settings
 
-    $('[data-fancybox]').fancybox({
-        touch: false,
-    });
+    // $('[data-fancybox]').fancybox({
+    //     touch: false,
+    // });
 
 
 
@@ -268,17 +268,25 @@ $(function () {
             infinite: false,
             arrows: true,
             fade: true,
-            asNavFor: '.project__thumbs'
+            asNavFor: '.project__thumbs, .popup__slider'
         });
 
         $('.project__thumbs').slick({
-            asNavFor: '.project__slider',
+            asNavFor: '.project__slider, .popup__slider',
             slidesToShow: 4,
             variableWidth: true,
             infinite: false,
             focusOnSelect: true,
             arrows: false,
         });
+
+        $('.popup__slider').slick({
+            asNavFor: '.project__slider, .project__thumbs',
+            slidesToShow: 1,
+            infinite: false,
+            arrows: true,
+            fade: true,
+        }) 
     }
 
     if ($('.plans__slider').length > 0) {
@@ -310,22 +318,21 @@ $(function () {
         return headerHeight;
     }
 
-    // window.addEventListener('resize', () => getHeaderHeight());
+    gsap.registerPlugin(ScrollTrigger);
 
 
-    // $(window).on('scroll', function () {
-    //     if ($(this).scrollTop() > getHeaderHeight()) {
-    //         $('header').addClass('scroll');
-    //     } else {
-    //         $('header').removeClass('scroll');
-    //     }
-    // });
-
-
-
-
-
-
+    if ($('.project__slider').length > 0) {
+        gsap.to('.project__slide img', {
+            yPercent: 50,
+            scrollTrigger: {
+                trigger: '.project',
+                start: `top top`,
+                end: 'bottom top',
+                scrub: true,
+            }
+        });
+        
+    }
 
 
 
