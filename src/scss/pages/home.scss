@@ -6,13 +6,11 @@
 	}
 	// .promo__slide
 	&__slide {
-
-	
 		@media (min-width: $md5) {
 			height: 100vh;
 		}
 		& img {
-			min-height: rem(320);
+			min-height: 320px;
 		}
 	}
 	// .promo__body

@@ -48,7 +48,7 @@
 	}
 	// .project__slide
 	&__slide {
-		min-height: rem(480);
+		min-height: 360px;
 		height: auto;
 		display: block;
 		cursor: pointer;
@@ -56,6 +56,9 @@
 		overflow: hidden;
 		@media (min-width: $md5) {
 			height: 100vh;
+		}
+		& img {
+			min-height: 360px;
 		}
 	}
 
@@ -67,7 +70,6 @@
 		width: 100%;
 		z-index: 2;
 		padding: var(--header-height) 0 0;
-
 		color: #fff;
 		background: linear-gradient(0deg, #000 16.51%, rgba(0, 0, 0, 0) 89.25%);
 	}
@@ -94,7 +96,10 @@
 	}
 	// .project__main-labels
 	&__main-labels {
-		margin-top: 32px;
+		margin-top: 16px;
+		@media (min-width: $md4) {
+			margin-top: 32px;
+		}
 		gap: 8px;
 	}
 	// .project__main-label
@@ -104,7 +109,7 @@
 	// .project__thumbs
 	&__thumbs {
 		min-width: 0;
-		padding: 20px 0;
+		padding: 0px 0 20px;
 		@media (min-width: $md3) {
 			padding: 40px 0;
 			margin-right: calc(-1 * ((100vw - 932px) / 2));
@@ -188,9 +193,7 @@
 
 .desc {
 	padding: 50px 0 25px;
-	@media (max-width:$md5) {
-		background: #f1f1f1;
-	}
+
 	@media (min-width: $md3) {
 		padding: 100px 0 52px;
 	}
@@ -207,6 +210,11 @@
 	&__item {
 		gap: 27px;
 		font-size: 14px;
+		@media (max-width: $md5) {
+			background: #f1f1f1;
+			margin: 0 -20px;
+			padding: 10px 20px;
+		}
 		@media (min-width: $md5) {
 			font-size: 18px;
 		}

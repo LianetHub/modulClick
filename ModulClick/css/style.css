@@ -46,16 +46,16 @@
 @font-face {
   font-family: "Verdana";
   font-display: swap;
-  src: url("../fonts/Verdana-Regular.woff2") format("woff2"), url("../fonts/Verdana-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Verdana";
   font-display: swap;
-  src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Verdana-Regular.woff2") format("woff2"), url("../fonts/Verdana-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -995,7 +995,7 @@ textarea.form-control {
 }
 
 .promo__slide img {
-  min-height: 20rem;
+  min-height: 320px;
 }
 
 .promo__body {
@@ -1702,12 +1702,16 @@ textarea.form-control {
 }
 
 .project__slide {
-  min-height: 30rem;
+  min-height: 360px;
   height: auto;
   display: block;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+}
+
+.project__slide img {
+  min-height: 360px;
 }
 
 .project__body {
@@ -1729,13 +1733,13 @@ textarea.form-control {
 }
 
 .project__main-labels {
-  margin-top: 32px;
+  margin-top: 16px;
   gap: 8px;
 }
 
 .project__thumbs {
   min-width: 0;
-  padding: 20px 0;
+  padding: 0px 0 20px;
 }
 
 .project__thumbs .slick-track {
@@ -2358,6 +2362,10 @@ textarea.form-control {
 
   .project__main-title {
     font-size: 50px;
+  }
+
+  .project__main-labels {
+    margin-top: 32px;
   }
 
   .price__item-btn::before {
@@ -3502,8 +3510,10 @@ textarea.form-control {
     max-width: 60px;
   }
 
-  .desc {
+  .desc__item {
     background: #f1f1f1;
+    margin: 0 -20px;
+    padding: 10px 20px;
   }
 
   .plans__tabs {
