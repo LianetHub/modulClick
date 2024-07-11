@@ -46,16 +46,16 @@
 @font-face {
   font-family: "Verdana";
   font-display: swap;
-  src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Verdana-Regular.woff2") format("woff2"), url("../fonts/Verdana-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Verdana";
   font-display: swap;
-  src: url("../fonts/Verdana-Regular.woff2") format("woff2"), url("../fonts/Verdana-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -994,18 +994,12 @@ textarea.form-control {
   position: relative;
 }
 
-.promo__slide {
-  min-height: 30rem;
-  height: 100vh;
+.promo__slide img {
+  min-height: 20rem;
 }
 
 .promo__body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-  padding: var(--header-height) 0 30px;
+  padding: 30px 0;
   color: #fff;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(6.51%, #000), color-stop(89.25%, rgba(0, 0, 0, 0)));
   background: -o-linear-gradient(bottom, #000 6.51%, rgba(0, 0, 0, 0) 89.25%);
@@ -1318,10 +1312,6 @@ textarea.form-control {
   -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-}
-
-.gallery__slider.slick-slider {
-  position: static;
 }
 
 .gallery__slider .slick-list {
@@ -1718,7 +1708,6 @@ textarea.form-control {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  height: 100vh;
 }
 
 .project__body {
@@ -1799,7 +1788,7 @@ textarea.form-control {
 
 .desc__item {
   gap: 27px;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.3333333333;
 }
 
@@ -1810,7 +1799,7 @@ textarea.form-control {
 }
 
 .desc__item-name {
-  width: 140px;
+  width: 120px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -2156,6 +2145,19 @@ textarea.form-control {
     margin-top: 84px;
   }
 
+  .promo__slide {
+    height: 100vh;
+  }
+
+  .promo__body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: var(--header-height) 0 30px;
+  }
+
   .promo__benefits {
     gap: 20px;
   }
@@ -2176,6 +2178,10 @@ textarea.form-control {
     padding: 40px;
   }
 
+  .project__slide {
+    height: 100vh;
+  }
+
   .project__thumbs .slick-track {
     gap: 24px;
   }
@@ -2186,6 +2192,14 @@ textarea.form-control {
 
   .project__thumb img {
     border-radius: 10px;
+  }
+
+  .desc__item {
+    font-size: 18px;
+  }
+
+  .desc__item-name {
+    width: 140px;
   }
 
   .price__item-main {
@@ -2284,6 +2298,10 @@ textarea.form-control {
   .gallery__offer.fade-tablet {
     opacity: 0;
     visibility: hidden;
+  }
+
+  .gallery__slider.slick-slider {
+    position: static;
   }
 
   .steps__body {
@@ -3482,6 +3500,10 @@ textarea.form-control {
   .benefits__card-icon img {
     max-height: 50px;
     max-width: 60px;
+  }
+
+  .desc {
+    background: #f1f1f1;
   }
 
   .plans__tabs {
